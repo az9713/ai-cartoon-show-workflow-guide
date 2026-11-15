@@ -162,3 +162,30 @@ These are original prompts written for this repo. They follow the structure the 
 This sentence (or a close variant) ends most colour prompts above. It plays the role of the STYLE block in the workflow: keep it identical and every asset looks like the same show.
 
 > Storybook cartoon style: bold black brush-ink outlines that thicken and thin, chunky rounded shapes, small round bead eyes with one white highlight, flat gouache colours with visible brush texture, limited palette of sea green, cream, coral and navy, faint paper grain.
+
+## The video clips
+
+Made with Wan 3.0 Prime image-to-video on fal (`alibaba/wan-3.0-prime/image-to-video`), 720p, 16:9, audio on (the model generates the voices and sound from the prompt). Each clip starts exactly on the listed start frame. Spoken lines go in quotes with a voice description; *static camera* and *no music, no text* keep the model from adding moves, a soundtrack or captions.
+
+### Clip 1 (10 s): the search
+
+- Model: `alibaba/wan-3.0-prime/image-to-video`, 720p, audio on
+- Start frame: `images/scene-still.jpg`
+
+> 2D storybook cartoon animation, keep the exact drawing style, colours and characters of the start frame; static camera, no camera moves. Inside a lighthouse lamp room at dusk. The elderly grey-haired woman kneeling at the sea chest, not wearing glasses, rummages through the rope and squints, then grumbles in a warm, elderly British woman's voice: "Where on earth are my specs?" The seagull on the window rail, wearing small round glasses, tilts its head and says in a cheeky, croaky young man's voice: "Evening, Marta. Lost something?" The woman looks up toward the gull, squinting, and asks: "My glasses. Seen them?" The gull looks away innocently and says: "Me? Never touch your things." Soft sound of waves outside, a gentle sea breeze. The gull's glasses stay on its beak the whole time; the woman never wears glasses. No music, no text, no subtitles.
+
+### Clip 2 (6 s): the close-up
+
+- Model: `alibaba/wan-3.0-prime/image-to-video`, 720p, audio on
+- Start frame: `images/gus-closeup.jpg`
+
+> 2D storybook cartoon animation, keep the exact drawing style, colours and character of the start frame; static close-up, no camera moves. The seagull wearing small round glasses pushes the glasses up its beak with the tip of a wing, puffs out its chest and says smugly in a cheeky, croaky young man's voice: "I've been birdwatching." A pause, then an elderly British woman's voice from off-screen asks suspiciously: "Watching what?" The gull raises one eyebrow. Soft waves in the background. No music, no text, no subtitles.
+
+### Clip 3 (5 s): the payoff
+
+- Model: `alibaba/wan-3.0-prime/image-to-video`, 720p, audio on
+- Start frame: `images/final-wide.jpg`
+
+> 2D storybook cartoon animation, keep the exact drawing style, colours and characters of the start frame; static wide shot, no camera moves. The seagull with round glasses hops sideways along the rail out of reach and squawks triumphantly in a cheeky, croaky young man's voice: "Birds!" The elderly grey-haired woman, without glasses, lunges and grabs at empty air, then stumbles. The big lighthouse lamp glows brighter and its beam sweeps slowly across the dusk sky. Sounds: a whoosh, the hum of the lamp, waves. Comic timing. No music, no text, no subtitles.
+
+The three clips were stitched with ffmpeg (short fade in at the start and out at the end) into `video/spare-specs.mp4`, 21 seconds.
