@@ -16,7 +16,7 @@ Also in the repo as [`video/spare-specs.mp4`](video/spare-specs.mp4) (2.8 MB). T
 
 ## How it was made: models and fal.ai cost
 
-Everything was generated on [fal.ai](https://fal.ai), pay-as-you-go from a $10 credit. Two generation models and one checking model:
+Two tools: **Claude Whiteboard** to map the host's workflow and plan the story and storyboard (see [The board at a glance](#the-board-at-a-glance)), and **[fal.ai](https://fal.ai)** to generate every picture, clip and voice, pay-as-you-go from a $10 credit. On fal, two generation models and one checking model:
 
 | Stage | Model on fal | Jobs | What was billed | List price | Cost |
 |---|---|---|---|---|---|
@@ -36,6 +36,8 @@ Cheaper options for the same 21 seconds: Wan 3.0 Prime at 480p ($0.068/s, about 
 Download or clone the repo and open **`index.html`** in a browser: one page with a tab per section, a zoomable "Whole board" tab, and images that open full size on click. GitHub shows `.html` files as code, so open it locally.
 
 ## The board at a glance
+
+The board was built with **Claude Whiteboard**, the whiteboard artifact in Claude, to turn Dan Kieft's video and prompt page into a picture a complete beginner can follow. Claude read the source material, then laid out the host's cartoon-show workflow as rounds of sticky notes, tables and arrows: the 10-step process from show bible to finished episode (Round 1), what each step produces and which tool does it (Rounds 2 to 3), his prompts word for word with a plain-English decoder (Round 4), and our own *Spare Specs* storyboard, where continuity mistakes such as the gull's glasses were caught and fixed on the board before any money was spent on images or video (Round 5). The board was then exported to `whiteboard/board.json`, rendered to the PNGs in `visuals/`, and rebuilt as the offline `index.html` so it can be shared without a Claude account.
 
 <a href="visuals/00-full-board.png"><img src="visuals/00-full-board.png" alt="The full whiteboard" width="100%"></a>
 
