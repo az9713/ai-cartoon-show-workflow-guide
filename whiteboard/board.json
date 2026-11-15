@@ -1,0 +1,1640 @@
+{
+ "meta": {
+  "v": 1,
+  "title": "How an AI cartoon show is made",
+  "order": [
+   "e4",
+   "e38",
+   "e59",
+   "e98",
+   "e109",
+   "e1",
+   "e2",
+   "e3",
+   "e5",
+   "e6",
+   "e7",
+   "e8",
+   "e9",
+   "e10",
+   "e11",
+   "e12",
+   "e13",
+   "e14",
+   "e15",
+   "e16",
+   "e17",
+   "e18",
+   "e19",
+   "e20",
+   "e21",
+   "e22",
+   "e23",
+   "e24",
+   "e25",
+   "e26",
+   "e27",
+   "e28",
+   "e29",
+   "e30",
+   "e31",
+   "e32",
+   "e33",
+   "e34",
+   "e35",
+   "e36",
+   "e37",
+   "e39",
+   "e40",
+   "e41",
+   "e42",
+   "e43",
+   "e44",
+   "e45",
+   "e46",
+   "e47",
+   "e48",
+   "e49",
+   "e50",
+   "e51",
+   "e52",
+   "e53",
+   "e54",
+   "e55",
+   "e56",
+   "e57",
+   "e58",
+   "e60",
+   "e61",
+   "e62",
+   "e63",
+   "e64",
+   "e65",
+   "e66",
+   "e67",
+   "e68",
+   "e69",
+   "e70",
+   "e71",
+   "e72",
+   "e73",
+   "e74",
+   "e75",
+   "e76",
+   "e77",
+   "e78",
+   "e79",
+   "e80",
+   "e81",
+   "e82",
+   "e83",
+   "e84",
+   "e85",
+   "e86",
+   "e87",
+   "e88",
+   "e89",
+   "e90",
+   "e91",
+   "e92",
+   "e93",
+   "e94",
+   "e95",
+   "e96",
+   "e97",
+   "e99",
+   "e100",
+   "e101",
+   "e102",
+   "e103",
+   "e104",
+   "e105",
+   "e106",
+   "e107",
+   "e108",
+   "e110",
+   "e111",
+   "e112",
+   "e113",
+   "e114",
+   "e115",
+   "e116",
+   "e117",
+   "e118",
+   "e119",
+   "e120",
+   "e121",
+   "e122",
+   "e123",
+   "e124",
+   "e125",
+   "e126",
+   "e127",
+   "e128",
+   "e129"
+  ]
+ },
+ "elements": {
+  "e1": {
+   "type": "text",
+   "x": 0,
+   "y": 0,
+   "text": "How an AI cartoon show is made",
+   "size": "title"
+  },
+  "e2": {
+   "type": "text",
+   "x": 0,
+   "y": 76,
+   "text": "Lock the style once; every asset reuses it.",
+   "size": "large"
+  },
+  "e3": {
+   "type": "text",
+   "x": 0,
+   "y": 128,
+   "text": "Study notes on Dan Kieft's workflow from his video [How To Make Your Animated Cartoon Show with AI](https://www.youtube.com/watch?v=ZRUpbbZF0_A) and his public [prompt page](https://cartoon-show-site.vercel.app/), explained for complete beginners. The worked example is our own: the 30-second sketch *Spare Specs*, with every picture made fresh on fal. Read top to bottom.",
+   "size": "small",
+   "wrap": 1500
+  },
+  "e4": {
+   "type": "container",
+   "x": 0,
+   "y": 230,
+   "w": 1760,
+   "h": 760,
+   "text": "Round 1 · The workflow at a glance (10 steps)",
+   "tab": "1 · Workflow"
+  },
+  "e5": {
+   "type": "text",
+   "x": 24,
+   "y": 260,
+   "text": "FOUNDATION · once per show",
+   "size": "small",
+   "color": "terracotta"
+  },
+  "e6": {
+   "type": "text",
+   "x": 612,
+   "y": 260,
+   "text": "ASSETS · built per story",
+   "size": "small"
+  },
+  "e7": {
+   "type": "text",
+   "x": 24,
+   "y": 500,
+   "text": "PRODUCTION · per scene",
+   "size": "small"
+  },
+  "e8": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 24,
+   "y": 294,
+   "w": 230,
+   "h": 150,
+   "color": "yellow",
+   "size": "body",
+   "text": "**1 · Pick a style**\nCollect pictures of looks you like. Claude writes one style guide.\n*Pinterest + Claude*"
+  },
+  "e9": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 318,
+   "y": 294,
+   "w": 230,
+   "h": 150,
+   "color": "yellow",
+   "size": "body",
+   "text": "**2 · Build skills**\nTurn the guide into a master-style skill + 4 helper skills.\n*Claude project*"
+  },
+  "e10": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 612,
+   "y": 294,
+   "w": 230,
+   "h": 150,
+   "color": "white",
+   "size": "body",
+   "text": "**3 · Write the story**\nDictate the idea; Claude returns beats, dialogue, shot list.\n*voice dictation + Claude*"
+  },
+  "e11": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 906,
+   "y": 294,
+   "w": 230,
+   "h": 150,
+   "color": "white",
+   "size": "body",
+   "text": "**4 · Characters**\nPhoto or description → character sheet (3 views).\n*Claude → image model*"
+  },
+  "e12": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 1200,
+   "y": 294,
+   "w": 230,
+   "h": 150,
+   "color": "white",
+   "size": "body",
+   "text": "**5 · Locations**\nEmpty background sets, from a photo or from text.\n*Claude → image model*"
+  },
+  "e13": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 1494,
+   "y": 294,
+   "w": 230,
+   "h": 150,
+   "color": "white",
+   "size": "body",
+   "text": "**6 · Props**\nObjects the characters touch, 2 views.\n*Claude → image model*"
+  },
+  "e14": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 24,
+   "y": 534,
+   "w": 230,
+   "h": 150,
+   "color": "white",
+   "size": "body",
+   "text": "**7 · Scene still**\nCombine sheets + set + prop into one image: the start frame.\n*Claude → image model*"
+  },
+  "e15": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 318,
+   "y": 534,
+   "w": 230,
+   "h": 150,
+   "color": "white",
+   "size": "body",
+   "text": "**8 · Voices**\nA short (<10 s) voice sample per character.\n*own recording / voice tool*"
+  },
+  "e16": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 612,
+   "y": 534,
+   "w": 230,
+   "h": 150,
+   "color": "white",
+   "size": "body",
+   "text": "**9 · Animate**\nStart frame + sheets + voices → clip, in cheap draft mode.\n*Claude → video model*"
+  },
+  "e17": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 906,
+   "y": 534,
+   "w": 230,
+   "h": 150,
+   "color": "white",
+   "size": "body",
+   "text": "**10 · Finish**\nUpscale the keepers, stitch the clips, trim silences.\n*video tool + editor*"
+  },
+  "e18": {
+   "type": "arrow",
+   "from": "e8",
+   "to": "e9",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  "e19": {
+   "type": "arrow",
+   "from": "e9",
+   "to": "e10",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  "e20": {
+   "type": "arrow",
+   "from": "e10",
+   "to": "e11",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  "e21": {
+   "type": "arrow",
+   "from": "e11",
+   "to": "e12",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  "e22": {
+   "type": "arrow",
+   "from": "e12",
+   "to": "e13",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  "e23": {
+   "type": "arrow",
+   "from": "e13",
+   "to": "e14",
+   "bends": [
+    "v",
+    120
+   ]
+  },
+  "e24": {
+   "type": "arrow",
+   "from": "e14",
+   "to": "e15",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  "e25": {
+   "type": "arrow",
+   "from": "e15",
+   "to": "e16",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  "e26": {
+   "type": "arrow",
+   "from": "e16",
+   "to": "e17",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  "e27": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 1200,
+   "y": 534,
+   "w": 536,
+   "h": 150,
+   "color": "white",
+   "size": "body",
+   "text": "**Why the foundation matters.** Each step feeds the next. Steps 1–2 make the same STYLE and FINISH text get pasted into every later prompt, so episode 10 looks like episode 1.\n*Yellow = foundation, done once per show.*",
+   "textAlign": "left",
+   "stroke": "terracotta"
+  },
+  "e28": {
+   "type": "text",
+   "x": 24,
+   "y": 740,
+   "text": "THE LOOP INSIDE EVERY ASSET STEP (3–9)",
+   "size": "small"
+  },
+  "e29": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 24,
+   "y": 774,
+   "w": 260,
+   "h": 96,
+   "color": "blue",
+   "size": "body",
+   "text": "**You describe**\nan idea, a photo, or one line"
+  },
+  "e30": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 348,
+   "y": 774,
+   "w": 260,
+   "h": 96,
+   "color": "blue",
+   "size": "body",
+   "text": "**Claude + a skill**\nwrites the full prompt"
+  },
+  "e31": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 672,
+   "y": 774,
+   "w": 260,
+   "h": 96,
+   "color": "blue",
+   "size": "body",
+   "text": "**The model generates**\nthe image or clip"
+  },
+  "e32": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 996,
+   "y": 774,
+   "w": 260,
+   "h": 96,
+   "color": "blue",
+   "size": "body",
+   "text": "**You check**\nkeep and lock in, or fix"
+  },
+  "e33": {
+   "type": "arrow",
+   "from": "e29",
+   "to": "e30",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  "e34": {
+   "type": "arrow",
+   "from": "e30",
+   "to": "e31",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  "e35": {
+   "type": "arrow",
+   "from": "e31",
+   "to": "e32",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  "e36": {
+   "type": "arrow",
+   "from": "e32",
+   "to": "e29",
+   "bends": [
+    "v",
+    80
+   ],
+   "label": "not right? edit the prompt, regenerate",
+   "dash": true
+  },
+  "e37": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 1320,
+   "y": 740,
+   "w": 416,
+   "h": 232,
+   "color": "white",
+   "size": "small",
+   "text": "**Rules of thumb from the workflow**\n- Build the foundation before generating\n- Tell the AI what each reference image is for\n- One image model for the whole show\n- Sets stay empty, so you can reuse them\n- Draft at low resolution; upscale only keepers\n- Lock each voice with a short sample\n- Clips are short: carry the last seconds forward",
+   "textAlign": "left"
+  },
+  "e38": {
+   "type": "container",
+   "x": 0,
+   "y": 1100,
+   "w": 1760,
+   "h": 1500,
+   "text": "Round 2 · Each step in plain words",
+   "tab": "2 · Each step"
+  },
+  "e39": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 24,
+   "y": 1140,
+   "w": 322,
+   "h": 360,
+   "color": "yellow",
+   "size": "small",
+   "text": "**1 · Pick a style**\n**Do:** gather screenshots of looks you like (Dan searched Pinterest for sitcom character designs and backgrounds) and ask Claude to describe *one* style that combines them.\n**You get:** a guide to linework, shapes, proportions, faces, colour, shading and lighting, plus the *picture finish*: the grain and softness of the whole frame.\n**Tip:** read all of it and continue only if you agree with the look.",
+   "textAlign": "left"
+  },
+  "e40": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 370,
+   "y": 1140,
+   "w": 322,
+   "h": 360,
+   "color": "yellow",
+   "size": "small",
+   "text": "**2 · Build the skills**\n**Do:** in a Claude project, ask Claude to save the guide as a master style skill, then four helpers: one each for characters, sets, props and video prompts.\n**Why:** a skill is a saved instruction file. Each helper copies the same STYLE and FINISH blocks into every prompt it writes.\n**Use:** type / and the skill name.",
+   "textAlign": "left"
+  },
+  "e41": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 716,
+   "y": 1140,
+   "w": 322,
+   "h": 360,
+   "color": "white",
+   "size": "small",
+   "text": "**3 · Write the story**\n**Do:** dictate the premise and ask for jokes that work visually, few lines and a strong ending; get the story beats first, then a shot list.\n**Iterate:** go back and forth with Claude before you lock anything in.\n**Tip:** draw a quick storyboard (Round 5) to check the story reads before you spend on colour.",
+   "textAlign": "left"
+  },
+  "e42": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 1062,
+   "y": 1140,
+   "w": 322,
+   "h": 360,
+   "color": "white",
+   "size": "small",
+   "text": "**4 · Character sheets**\n**Do:** upload a photo (or describe the character), run the character-sheet skill and type one line, e.g. *“make a cartoon sheet of this person.”* Paste Claude's prompt into the image model at 16:9.\n**Sheet** = front, three-quarter and side views at one scale.\n**Fix:** outfit wrong? use the sheet as @image1 and describe only the clothes.",
+   "textAlign": "left"
+  },
+  "e43": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 1408,
+   "y": 1140,
+   "w": 322,
+   "h": 360,
+   "color": "white",
+   "size": "small",
+   "text": "**5 · Location plates**\n**Do:** run the location skill with a photo (*“turn this into a cartoon set”*) or with words only (*“a cosy kitchen with a green stove”*).\n**Rule:** always empty, no characters. That is what makes a set reusable in any shot.\n**The prompt sets** camera height, horizon, light direction and an open *acting area* for the characters.",
+   "textAlign": "left"
+  },
+  "e44": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 24,
+   "y": 1524,
+   "w": 322,
+   "h": 360,
+   "color": "white",
+   "size": "small",
+   "text": "**6 · Prop sheets**\n**Do:** use the prop skill and describe the object.\n**Show** two views at the same scale, on the same plain background as the character sheets.\n**Tip:** say what must NOT appear (labels, text, objects that would spoil a joke).",
+   "textAlign": "left"
+  },
+  "e45": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 370,
+   "y": 1524,
+   "w": 322,
+   "h": 360,
+   "color": "white",
+   "size": "small",
+   "text": "**7 · Scene still**\n**Do:** new chat; upload the character sheets, the set and the prop. Tell Claude what each image is for, the composition, and real heights so the scale is right.\n**Then:** paste the prompt and all images into the image model; check each @image tag points at the right picture.\n**Rule:** keep one image model for the whole show.",
+   "textAlign": "left"
+  },
+  "e46": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 716,
+   "y": 1524,
+   "w": 322,
+   "h": 360,
+   "color": "white",
+   "size": "small",
+   "text": "**8 · Voices**\n**Do:** record under 10 s of each voice, or design one in a voice tool.\n**Why:** without a fixed sample, the video model invents a different voice in every clip.\n**In prompts:** @audio1 = the first voice, @audio2 = the second. The sample fixes how they sound; your script decides what they say.",
+   "textAlign": "left"
+  },
+  "e47": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 1062,
+   "y": 1524,
+   "w": 322,
+   "h": 360,
+   "color": "white",
+   "size": "small",
+   "text": "**9 · Animate**\n**Upload:** the start frame (@image1), the character sheets and the voices.\n**Prompt:** camera (*“static, as @image1”*), numbered actions, performance notes, dialogue with speaker tags.\n**Draft first:** low resolution, short clip, audio on.\n**Longer than one clip?** Reuse the last few seconds of clip 1 as a reference so motion continues.",
+   "textAlign": "left"
+  },
+  "e48": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 1408,
+   "y": 1524,
+   "w": 322,
+   "h": 360,
+   "color": "white",
+   "size": "small",
+   "text": "**10 · Finish**\n**Do:** only when you are happy, re-render each clip at full resolution.\n**Then:** stitch the parts together and trim the silences.\n**Why draft first:** a bad draft wastes few credits; the high-resolution render is the expensive step, so do it last.",
+   "textAlign": "left"
+  },
+  "e49": {
+   "type": "text",
+   "x": 24,
+   "y": 1948,
+   "text": "Anatomy of every prompt Claude writes",
+   "size": "large"
+  },
+  "e50": {
+   "type": "shape",
+   "kind": "rect",
+   "x": 24,
+   "y": 2004,
+   "w": 520,
+   "h": 64,
+   "color": "white",
+   "size": "small",
+   "text": "**REFERENCES** · which @image / @audio is which, and what to ignore in it",
+   "textAlign": "left"
+  },
+  "e51": {
+   "type": "shape",
+   "kind": "rect",
+   "x": 24,
+   "y": 2080,
+   "w": 520,
+   "h": 64,
+   "color": "white",
+   "size": "small",
+   "text": "**SUBJECT** · CHARACTER, LOCATION, PROP or SCENE: the specifics",
+   "textAlign": "left"
+  },
+  "e52": {
+   "type": "shape",
+   "kind": "rect",
+   "x": 24,
+   "y": 2156,
+   "w": 520,
+   "h": 64,
+   "color": "white",
+   "size": "small",
+   "text": "**LAYOUT / CAMERA** · views on the sheet, or framing + numbered actions",
+   "textAlign": "left"
+  },
+  "e53": {
+   "type": "shape",
+   "kind": "rect",
+   "x": 24,
+   "y": 2232,
+   "w": 520,
+   "h": 64,
+   "color": "yellow",
+   "size": "small",
+   "text": "**STYLE** · pasted unchanged every time, from the master skill",
+   "textAlign": "left"
+  },
+  "e54": {
+   "type": "shape",
+   "kind": "rect",
+   "x": 24,
+   "y": 2308,
+   "w": 520,
+   "h": 64,
+   "color": "yellow",
+   "size": "small",
+   "text": "**FINISH** · pasted unchanged every time: the look of the whole frame",
+   "textAlign": "left"
+  },
+  "e55": {
+   "type": "shape",
+   "kind": "rect",
+   "x": 24,
+   "y": 2384,
+   "w": 520,
+   "h": 64,
+   "color": "white",
+   "size": "small",
+   "text": "**EXCLUSIONS** · what must not appear (no text, no glasses on Marta…)",
+   "textAlign": "left"
+  },
+  "e56": {
+   "type": "text",
+   "x": 24,
+   "y": 2468,
+   "text": "STYLE and FINISH are copied word for word into every character, location, prop, scene and video prompt. That copy-paste is what keeps a show consistent.",
+   "size": "small",
+   "wrap": 520
+  },
+  "e57": {
+   "type": "text",
+   "x": 600,
+   "y": 1948,
+   "text": "Glossary for beginners",
+   "size": "large"
+  },
+  "e58": {
+   "type": "table",
+   "x": 612,
+   "y": 2004,
+   "cols": {
+    "c1": {
+     "at": 1,
+     "w": 250
+    },
+    "c2": {
+     "at": 2,
+     "w": 470
+    },
+    "c3": {
+     "at": 3,
+     "w": 380
+    }
+   },
+   "rows": {
+    "r1": {
+     "at": 1,
+     "c1": "Term",
+     "c2": "Plain meaning",
+     "c3": "In our example"
+    },
+    "r2": {
+     "at": 2,
+     "c1": "Style guide",
+     "c2": "Written rules for how everything is drawn",
+     "c3": "brush-ink outlines, gouache colour, paper grain"
+    },
+    "r3": {
+     "at": 3,
+     "c1": "Picture finish",
+     "c2": "The look over the drawing: grain, softness, texture",
+     "c3": "printed-paper grain"
+    },
+    "r4": {
+     "at": 4,
+     "c1": "Skill",
+     "c2": "A saved instruction file Claude loads on demand (SKILL.md)",
+     "c3": "a master style + 4 helpers"
+    },
+    "r5": {
+     "at": 5,
+     "c1": "Claude project",
+     "c2": "A folder of chats that share context",
+     "c3": "one project per show"
+    },
+    "r6": {
+     "at": 6,
+     "c1": "Story beats",
+     "c2": "The key moments of the story, in order",
+     "c3": "search, Gus lands, the glasses, the chase"
+    },
+    "r7": {
+     "at": 7,
+     "c1": "Shot list",
+     "c2": "The camera shots needed to tell the beats",
+     "c3": "the 8 storyboard panels"
+    },
+    "r8": {
+     "at": 8,
+     "c1": "Character sheet",
+     "c2": "One character drawn from several angles at one scale (turnaround)",
+     "c3": "Marta: front, 3/4, side"
+    },
+    "r9": {
+     "at": 9,
+     "c1": "Location plate",
+     "c2": "An empty background set, no characters",
+     "c3": "lamp room, kitchen"
+    },
+    "r10": {
+     "at": 10,
+     "c1": "Prop sheet",
+     "c2": "Reference drawing of an object from 2 views",
+     "c3": "the sea chest"
+    },
+    "r11": {
+     "at": 11,
+     "c1": "Reference (@image1)",
+     "c2": "An uploaded picture the AI must match; the tag names it",
+     "c3": "image 1 = Marta's sheet"
+    },
+    "r12": {
+     "at": 12,
+     "c1": "Start frame",
+     "c2": "The image a video clip begins from",
+     "c3": "the lamp-room scene still"
+    },
+    "r13": {
+     "at": 13,
+     "c1": "Draft mode",
+     "c2": "Cheap low-resolution test render",
+     "c3": "check timing before paying for full quality"
+    },
+    "r14": {
+     "at": 14,
+     "c1": "Upscale",
+     "c2": "Re-render a kept draft at high resolution",
+     "c3": "the last step"
+    },
+    "r15": {
+     "at": 15,
+     "c1": "Continuity",
+     "c2": "Consecutive shots agree: who holds what, where, when",
+     "c3": "Gus wears the glasses from panel 4 on"
+    },
+    "r16": {
+     "at": 16,
+     "c1": "Voice ref (@audio1)",
+     "c2": "A short sample that fixes how a character sounds",
+     "c3": "one sample each for Marta and Gus"
+    },
+    "r17": {
+     "at": 17,
+     "c1": "Image model / video model",
+     "c2": "The AI that draws stills / the one that animates",
+     "c3": "FLUX.2 [klein] for our stills"
+    }
+   }
+  },
+  "e59": {
+   "type": "container",
+   "x": 0,
+   "y": 2710,
+   "w": 1760,
+   "h": 1300,
+   "text": "Round 3 · Our worked example, “Spare Specs”, through the workflow",
+   "tab": "3 · Worked example"
+  },
+  "e60": {
+   "type": "text",
+   "x": 224,
+   "y": 2738,
+   "text": "INPUT (what goes to the model)",
+   "size": "small"
+  },
+  "e61": {
+   "type": "text",
+   "x": 632,
+   "y": 2738,
+   "text": "RESULT (generated on fal)",
+   "size": "small"
+  },
+  "e62": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 24,
+   "y": 2774,
+   "w": 176,
+   "h": 180,
+   "color": "white",
+   "size": "small",
+   "text": "**Step 1 · Style**\nwritten, not copied"
+  },
+  "e63": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 224,
+   "y": 2774,
+   "w": 320,
+   "h": 180,
+   "color": "white",
+   "size": "small",
+   "text": "Our own style text: bold black brush-ink outlines, chunky rounded shapes, flat gouache colour, sea green, cream, coral and navy, faint paper grain.",
+   "textAlign": "left"
+  },
+  "e64": {
+   "type": "image",
+   "x": 632,
+   "y": 2774,
+   "w": 320,
+   "h": 180,
+   "src": "images/style-sheet.jpg"
+  },
+  "e65": {
+   "type": "arrow",
+   "from": "e63",
+   "to": "e64",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  "e66": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 24,
+   "y": 2978,
+   "w": 176,
+   "h": 180,
+   "color": "white",
+   "size": "small",
+   "text": "**Step 4 · Marta**\nsheet, then an outfit-only edit"
+  },
+  "e67": {
+   "type": "image",
+   "x": 224,
+   "y": 2978,
+   "w": 320,
+   "h": 180,
+   "src": "images/marta-sheet.jpg"
+  },
+  "e68": {
+   "type": "image",
+   "x": 632,
+   "y": 2978,
+   "w": 320,
+   "h": 180,
+   "src": "images/marta-sunday.jpg"
+  },
+  "e69": {
+   "type": "arrow",
+   "from": "e67",
+   "to": "e68",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  "e70": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 24,
+   "y": 3182,
+   "w": 176,
+   "h": 180,
+   "color": "white",
+   "size": "small",
+   "text": "**Step 4 · Gus**\nphoto → cartoon sheet"
+  },
+  "e71": {
+   "type": "image",
+   "x": 224,
+   "y": 3182,
+   "w": 320,
+   "h": 180,
+   "src": "images/gus-photo.jpg"
+  },
+  "e72": {
+   "type": "image",
+   "x": 632,
+   "y": 3182,
+   "w": 320,
+   "h": 180,
+   "src": "images/gus-sheet.jpg"
+  },
+  "e73": {
+   "type": "arrow",
+   "from": "e71",
+   "to": "e72",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  "e74": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 24,
+   "y": 3386,
+   "w": 176,
+   "h": 180,
+   "color": "white",
+   "size": "small",
+   "text": "**Step 5 · Lamp room**\nfrom a photo"
+  },
+  "e75": {
+   "type": "image",
+   "x": 224,
+   "y": 3386,
+   "w": 320,
+   "h": 180,
+   "src": "images/lamproom-photo.jpg"
+  },
+  "e76": {
+   "type": "image",
+   "x": 632,
+   "y": 3386,
+   "w": 320,
+   "h": 180,
+   "src": "images/lamproom-plate.jpg"
+  },
+  "e77": {
+   "type": "arrow",
+   "from": "e75",
+   "to": "e76",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  "e78": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 24,
+   "y": 3590,
+   "w": 176,
+   "h": 180,
+   "color": "white",
+   "size": "small",
+   "text": "**Step 5 · Kitchen**\nfrom text only"
+  },
+  "e79": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 224,
+   "y": 3590,
+   "w": 320,
+   "h": 180,
+   "color": "white",
+   "size": "small",
+   "text": "“Empty cartoon kitchen of a lighthouse keeper's cottage: green iron stove, round porthole window, table with a teapot, checkered floor, room in front for characters.”",
+   "textAlign": "left"
+  },
+  "e80": {
+   "type": "image",
+   "x": 632,
+   "y": 3590,
+   "w": 320,
+   "h": 180,
+   "src": "images/kitchen-plate.jpg"
+  },
+  "e81": {
+   "type": "arrow",
+   "from": "e79",
+   "to": "e80",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  "e82": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 24,
+   "y": 3794,
+   "w": 176,
+   "h": 180,
+   "color": "white",
+   "size": "small",
+   "text": "**Step 6 · Sea chest**\nfrom a description"
+  },
+  "e83": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 224,
+   "y": 3794,
+   "w": 320,
+   "h": 180,
+   "color": "white",
+   "size": "small",
+   "text": "Old wooden sea chest, brass corners, rope handle, lid open, rope, chart and spyglass inside. Front + 3/4 views. No text.",
+   "textAlign": "left"
+  },
+  "e84": {
+   "type": "image",
+   "x": 632,
+   "y": 3794,
+   "w": 320,
+   "h": 180,
+   "src": "images/chest-sheet.jpg"
+  },
+  "e85": {
+   "type": "arrow",
+   "from": "e83",
+   "to": "e84",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  "e86": {
+   "type": "image",
+   "x": 1056,
+   "y": 3124,
+   "w": 680,
+   "h": 383,
+   "src": "images/scene-still.jpg"
+  },
+  "e87": {
+   "type": "text",
+   "x": 1056,
+   "y": 3519,
+   "text": "**Step 7 · Scene still = start frame.** Marta's sheet + Gus's sheet + lamp-room plate + sea chest in one image. The first try put glasses on Marta and lit the lamp too early; one edit fixed both (*“remove her glasses, turn the lamp off, keep everything else”*).",
+   "size": "small",
+   "wrap": 680
+  },
+  "e88": {
+   "type": "arrow",
+   "from": "e68",
+   "to": "e86",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  "e89": {
+   "type": "arrow",
+   "from": "e72",
+   "to": "e86",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  "e90": {
+   "type": "arrow",
+   "from": "e76",
+   "to": "e86",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  "e91": {
+   "type": "arrow",
+   "from": "e84",
+   "to": "e86",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  "e92": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 1056,
+   "y": 3644,
+   "w": 300,
+   "h": 300,
+   "color": "white",
+   "size": "small",
+   "text": "**Step 9 · Clip 1** · start frame = the scene still\n**Marta:** Where on earth are my specs?\n**Gus:** Evening, Marta. Lost something?\n**Marta:** My glasses. Seen them?\n**Gus:** Me? Never touch your things.",
+   "textAlign": "left"
+  },
+  "e93": {
+   "type": "image",
+   "x": 1420,
+   "y": 3644,
+   "w": 153,
+   "h": 86,
+   "src": "images/gus-closeup.jpg"
+  },
+  "e94": {
+   "type": "image",
+   "x": 1583,
+   "y": 3644,
+   "w": 153,
+   "h": 86,
+   "src": "images/final-wide.jpg"
+  },
+  "e95": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 1420,
+   "y": 3754,
+   "w": 316,
+   "h": 190,
+   "color": "white",
+   "size": "small",
+   "text": "**Step 9 · Clip 2** · start frames: the close-up (left) and the final wide (right)\n**Gus:** I've been birdwatching.\n**Marta:** Watching what?\n**Gus:** Birds!",
+   "textAlign": "left"
+  },
+  "e96": {
+   "type": "arrow",
+   "from": "e92",
+   "to": "e95",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  "e97": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 1056,
+   "y": 3968,
+   "w": 680,
+   "h": 64,
+   "color": "white",
+   "size": "small",
+   "text": "**Step 10 · Finish:** re-render both clips at full resolution → stitch → trim → a 30-second sketch."
+  },
+  "e98": {
+   "type": "container",
+   "x": 0,
+   "y": 4120,
+   "w": 1760,
+   "h": 1540,
+   "text": "Round 4 · Decoder for prompt words, and our own prompts",
+   "tab": "4 · Decoder + prompts"
+  },
+  "e99": {
+   "type": "text",
+   "x": 24,
+   "y": 4144,
+   "text": "Prompts for cartoons use drawing and film words. The decoder translates them. Below it are the actual prompts we sent to fal for *Spare Specs* (all of them are in `docs/PROMPTS.md`). For the original tutorial's prompts, see the creator's prompt page linked at the top.",
+   "size": "body",
+   "wrap": 1700
+  },
+  "e100": {
+   "type": "table",
+   "x": 24,
+   "y": 4204,
+   "cols": {
+    "c1": {
+     "at": 1,
+     "w": 330
+    },
+    "c2": {
+     "at": 2,
+     "w": 620
+    },
+    "c3": {
+     "at": 3,
+     "w": 230
+    }
+   },
+   "rows": {
+    "r1": {
+     "at": 1,
+     "c1": "Term in the prompts",
+     "c2": "Plain English",
+     "c3": "Where you see it"
+    },
+    "r2": {
+     "at": 2,
+     "c1": "Turnaround / character sheet",
+     "c2": "One character shown from several angles side by side, as a reference",
+     "c3": "character prompts"
+    },
+    "r3": {
+     "at": 3,
+     "c1": "Front / three-quarter / side view",
+     "c2": "Facing you / turned halfway / in profile",
+     "c3": "sheets"
+    },
+    "r4": {
+     "at": 4,
+     "c1": "Head heights",
+     "c2": "Body height counted in head-lengths; cartoons use few",
+     "c3": "character prompts"
+    },
+    "r5": {
+     "at": 5,
+     "c1": "Outline weight · monoline",
+     "c2": "How thick the lines are · one even thickness",
+     "c3": "STYLE"
+    },
+    "r6": {
+     "at": 6,
+     "c1": "Brush-ink line that thickens and thins",
+     "c2": "A line drawn with a brush, varying in width",
+     "c3": "our STYLE"
+    },
+    "r7": {
+     "at": 7,
+     "c1": "Shape language",
+     "c2": "The basic shapes a style is built from (round reads friendly)",
+     "c3": "style guide"
+    },
+    "r8": {
+     "at": 8,
+     "c1": "Silhouette",
+     "c2": "A character's outline filled solid; a good one is recognisable",
+     "c3": "style guide"
+    },
+    "r9": {
+     "at": 9,
+     "c1": "Flat fill · no gradients",
+     "c2": "Each area one solid colour; no shading that fakes 3D",
+     "c3": "STYLE"
+    },
+    "r10": {
+     "at": 10,
+     "c1": "Cel shading · hard-edged shadow",
+     "c2": "One sharp-edged darker tone for shadow",
+     "c3": "STYLE"
+    },
+    "r11": {
+     "at": 11,
+     "c1": "Gouache",
+     "c2": "Thick, matte opaque watercolour paint",
+     "c3": "our STYLE"
+    },
+    "r12": {
+     "at": 12,
+     "c1": "Picture finish",
+     "c2": "How the whole frame looks on top of the drawing",
+     "c3": "FINISH"
+    },
+    "r13": {
+     "at": 13,
+     "c1": "Grain · paper texture",
+     "c2": "Fine speckle, like printed paper or film",
+     "c3": "FINISH"
+    },
+    "r14": {
+     "at": 14,
+     "c1": "Background plate",
+     "c2": "An empty background picture; characters are added later",
+     "c3": "location prompts"
+    },
+    "r15": {
+     "at": 15,
+     "c1": "Wide · medium · close-up",
+     "c2": "Whole scene · waist up · face fills the frame",
+     "c3": "shot list, video prompts"
+    },
+    "r16": {
+     "at": 16,
+     "c1": "Eye level · horizon",
+     "c2": "Camera height; where that height meets the far wall",
+     "c3": "location prompts"
+    },
+    "r17": {
+     "at": 17,
+     "c1": "Acting area",
+     "c2": "Floor space kept empty so characters can stand there",
+     "c3": "location prompts"
+    },
+    "r18": {
+     "at": 18,
+     "c1": "Frame left vs her own left",
+     "c2": "Screen side vs the character's own side (mirror images)",
+     "c3": "scene prompts"
+    },
+    "r19": {
+     "at": 19,
+     "c1": "Identity only",
+     "c2": "Copy who or what it is, not the photo's lighting or detail",
+     "c3": "REFERENCES"
+    },
+    "r20": {
+     "at": 20,
+     "c1": "@image1 · @audio1",
+     "c2": "Tag for the first uploaded image · the first voice",
+     "c3": "every reference prompt"
+    },
+    "r21": {
+     "at": 21,
+     "c1": "Start frame",
+     "c2": "The exact picture the clip begins on",
+     "c3": "video prompts"
+    },
+    "r22": {
+     "at": 22,
+     "c1": "Static · hard cut",
+     "c2": "Camera does not move · instant switch to another shot",
+     "c3": "video prompts"
+    },
+    "r23": {
+     "at": 23,
+     "c1": "Beat · hold",
+     "c2": "One small moment of action · stay still for a moment",
+     "c3": "story, video prompts"
+    },
+    "r24": {
+     "at": 24,
+     "c1": "Exclusions / negative prompt",
+     "c2": "What must NOT appear",
+     "c3": "every prompt"
+    }
+   }
+  },
+  "e101": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 1240,
+   "y": 4204,
+   "w": 496,
+   "h": 300,
+   "color": "yellow",
+   "size": "small",
+   "text": "**How to read one prompt**\n1. First line: what it makes (sheet, plate, scene still, clip)\n2. REFERENCES: which upload is which, and what to ignore\n3. Middle: the specifics (who, where, camera, actions, lines)\n4. STYLE + FINISH: pasted from the master skill; never edit\n5. EXCLUSIONS: what must not appear\n\nIn the workflow you type one line and the skill writes the rest.",
+   "textAlign": "left"
+  },
+  "e102": {
+   "type": "text",
+   "x": 24,
+   "y": 5032,
+   "text": "Our prompts (FLUX.2 [klein] 9B on fal; references are passed as image 1, image 2, …)",
+   "size": "large"
+  },
+  "e103": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 24,
+   "y": 5072,
+   "w": 552,
+   "h": 270,
+   "color": "white",
+   "size": "small",
+   "text": "**Marta: character sheet**\n*text only*\nCartoon character turnaround sheet of an original character: a stout, cheerful elderly lighthouse keeper woman with a grey hair bun, round wire glasses, rosy cheeks, navy cable-knit jumper, yellow oilskin trousers and black rubber boots. Front view, three-quarter view and side view of the same woman standing side by side at identical size, neutral pose, on a plain cream background, no text. Storybook cartoon style: bold black brush-ink outlines that thicken and thin, chunky rounded shapes, small round bead eyes with one white highlight, flat gouache colours with visible brush texture, limited palette of sea green, cream, coral and navy, faint paper grain.",
+   "textAlign": "left"
+  },
+  "e104": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 600,
+   "y": 5072,
+   "w": 552,
+   "h": 270,
+   "color": "white",
+   "size": "small",
+   "text": "**Marta: outfit-only edit**\n*image 1 = Marta's sheet*\nThe same turnaround sheet of the same woman as image 1, same three views, same pose, size, face, hair bun, glasses, line style and cream background. Only the outfit changes: a coral knitted cardigan over a cream blouse, a navy skirt with small white flowers, thick grey socks and brown lace-up shoes. No text.",
+   "textAlign": "left"
+  },
+  "e105": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 1176,
+   "y": 5072,
+   "w": 552,
+   "h": 270,
+   "color": "white",
+   "size": "small",
+   "text": "**Gus: photo to cartoon sheet**\n*image 1 = gull photo, image 2 = Marta's sheet (style)*\nTurn the gull in image 1 into a cartoon character turnaround sheet, drawn in the style of image 2: front view, three-quarter view and side view of the same chubby herring gull standing side by side at identical size on a plain cream background, no text. Keep its markings: white head and body, grey wings with black tips, yellow beak with a red spot, pink legs. Bold black brush-ink outlines that thicken and thin, chunky rounded shapes, small round bead eyes with one white highlight, flat gouache colour with visible brush texture, faint paper grain.",
+   "textAlign": "left"
+  },
+  "e106": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 24,
+   "y": 5366,
+   "w": 552,
+   "h": 270,
+   "color": "white",
+   "size": "small",
+   "text": "**Lamp room: photo to background plate**\n*image 1 = lamp-room photo, image 2 = kitchen plate (style)*\nRedraw the lighthouse lamp room photo in image 1 as an empty cartoon background, keeping its layout: the big lens in the centre, the curved windows, the railing and the stool. Draw it in the style of image 2: bold black brush-ink outlines that thicken and thin, chunky rounded shapes, flat gouache colours with visible brush texture, palette of sea green, cream, coral and navy, faint paper grain. Dusk light. Leave open floor space in the front for characters. No characters, no text.",
+   "textAlign": "left"
+  },
+  "e107": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 600,
+   "y": 5366,
+   "w": 552,
+   "h": 270,
+   "color": "white",
+   "size": "small",
+   "text": "**Scene still (first try)**\n*image 1 = Marta, 2 = Gus, 3 = lamp-room plate, 4 = sea chest*\nOne single cartoon scene, wide shot at eye level, inside the lighthouse lamp room from image 3 at dusk, same style, colours and layout. On the left, the woman from image 1, same face, bun, navy jumper, yellow trousers and boots but NOT wearing glasses, kneels at the open sea chest from image 4 and digs through the rope, squinting. On the right, the gull from image 2 stands on the window rail, wearing small round wire glasses on its beak, looking innocently away. Characters drawn exactly in the style of images 1 and 2: bold black brush-ink outlines, flat gouache colours, faint paper grain. No text.",
+   "textAlign": "left"
+  },
+  "e108": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 1176,
+   "y": 5366,
+   "w": 552,
+   "h": 270,
+   "color": "white",
+   "size": "small",
+   "text": "**Scene still: the fix edit**\n*image 1 = the first try*\nRemove the glasses from the kneeling grey-haired woman so her face and eyes are bare, squinting. Turn the lamp inside the big glass lens off, so it is dark and unlit. The gull on the right keeps its glasses. Keep everything else in the image exactly the same.",
+   "textAlign": "left"
+  },
+  "e109": {
+   "type": "container",
+   "x": 0,
+   "y": 5770,
+   "w": 1760,
+   "h": 1010,
+   "text": "Round 5 · Our own story, “Spare Specs”: the storyboard",
+   "tab": "5 · Storyboard"
+  },
+  "e110": {
+   "type": "text",
+   "x": 24,
+   "y": 5792,
+   "text": "**Marta**, a stout lighthouse keeper, can't find her glasses; **Gus**, a cheeky herring gull, is wearing them. The joke runs on *dramatic irony*: from panel 4 the audience sees the glasses on Gus, but Marta can't, because she isn't wearing them. A storyboard is one quick sketch per shot, read left to right: you check story and camera before paying for colour images or video.",
+   "size": "small",
+   "wrap": 1700
+  },
+  "e111": {
+   "type": "text",
+   "x": 24,
+   "y": 5838,
+   "text": "CLIP 1 · panels 1–4",
+   "size": "small",
+   "color": "terracotta"
+  },
+  "e112": {
+   "type": "image",
+   "x": 24,
+   "y": 5866,
+   "w": 400,
+   "h": 225,
+   "src": "images/sb01.jpg"
+  },
+  "e113": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 24,
+   "y": 6103,
+   "w": 400,
+   "h": 112,
+   "color": "white",
+   "size": "small",
+   "text": "**1 · Extreme wide** · Dusk. The lighthouse lamp is still dark. *Sound: waves, one gull.*",
+   "textAlign": "left"
+  },
+  "e114": {
+   "type": "image",
+   "x": 448,
+   "y": 5866,
+   "w": 400,
+   "h": 225,
+   "src": "images/sb02.jpg"
+  },
+  "e115": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 448,
+   "y": 6103,
+   "w": 400,
+   "h": 112,
+   "color": "white",
+   "size": "small",
+   "text": "**2 · Medium** · Marta squints at the logbook held at arm's length.\n**Marta:** \"Where on earth are my specs?\"",
+   "textAlign": "left"
+  },
+  "e116": {
+   "type": "image",
+   "x": 872,
+   "y": 5866,
+   "w": 400,
+   "h": 225,
+   "src": "images/sb03.jpg"
+  },
+  "e117": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 872,
+   "y": 6103,
+   "w": 400,
+   "h": 112,
+   "color": "white",
+   "size": "small",
+   "text": "**3 · Medium-wide** · She digs through the sea chest; rope, chart and spyglass fly.",
+   "textAlign": "left"
+  },
+  "e118": {
+   "type": "image",
+   "x": 1296,
+   "y": 5866,
+   "w": 400,
+   "h": 225,
+   "src": "images/sb04.jpg"
+  },
+  "e119": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 1296,
+   "y": 6103,
+   "w": 400,
+   "h": 112,
+   "color": "white",
+   "size": "small",
+   "text": "**4 · Medium** · Gus lands on the window rail, already wearing Marta's glasses.\n**Gus:** \"Evening, Marta. Lost something?\"",
+   "textAlign": "left"
+  },
+  "e120": {
+   "type": "text",
+   "x": 24,
+   "y": 6238,
+   "text": "CLIP 1 (end) · panel 5   |   CLIP 2 · panels 6–8",
+   "size": "small",
+   "color": "terracotta"
+  },
+  "e121": {
+   "type": "image",
+   "x": 24,
+   "y": 6266,
+   "w": 400,
+   "h": 225,
+   "src": "images/sb05.jpg"
+  },
+  "e122": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 24,
+   "y": 6503,
+   "w": 400,
+   "h": 112,
+   "color": "white",
+   "size": "small",
+   "text": "**5 · Wide two-shot** · Without her glasses Marta can't see that Gus has them.\n**Marta:** \"My glasses. Seen them?\" **Gus:** \"Me? Never touch your things.\"",
+   "textAlign": "left"
+  },
+  "e123": {
+   "type": "image",
+   "x": 448,
+   "y": 6266,
+   "w": 400,
+   "h": 225,
+   "src": "images/sb06.jpg"
+  },
+  "e124": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 448,
+   "y": 6503,
+   "w": 400,
+   "h": 112,
+   "color": "white",
+   "size": "small",
+   "text": "**6 · Close-up** · Gus pushes the glasses up his beak, smug.\n**Gus:** \"I've been birdwatching.\"",
+   "textAlign": "left"
+  },
+  "e125": {
+   "type": "image",
+   "x": 872,
+   "y": 6266,
+   "w": 400,
+   "h": 225,
+   "src": "images/sb07.jpg"
+  },
+  "e126": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 872,
+   "y": 6503,
+   "w": 400,
+   "h": 112,
+   "color": "white",
+   "size": "small",
+   "text": "**7 · Close-up** · Marta narrows her eyes.\n**Marta:** \"Watching what?\"",
+   "textAlign": "left"
+  },
+  "e127": {
+   "type": "image",
+   "x": 1296,
+   "y": 6266,
+   "w": 400,
+   "h": 225,
+   "src": "images/sb08.jpg"
+  },
+  "e128": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 1296,
+   "y": 6503,
+   "w": 400,
+   "h": 112,
+   "color": "white",
+   "size": "small",
+   "text": "**8 · Wide** · She lunges, he hops out of reach, the lamp blazes on.\n**Gus:** \"Birds!\"",
+   "textAlign": "left"
+  },
+  "e129": {
+   "type": "shape",
+   "kind": "rounded",
+   "x": 24,
+   "y": 6666,
+   "w": 1696,
+   "h": 90,
+   "color": "yellow",
+   "size": "small",
+   "text": "**How these were made:** pencil storyboard sketches generated on fal, each built from Marta's and Gus's reference images so the cast stays the same. Three panels were redone because the model drifted (a split frame, a different face, glasses on the wrong character). Then a *continuity* fix: the glasses first appeared on Gus only in panel 6, so panels 4 and 5 got one-line edits. Lesson: read the board as a story, and fix with small edits instead of starting over.",
+   "textAlign": "left"
+  }
+ }
+}

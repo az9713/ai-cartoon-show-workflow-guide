@@ -1,0 +1,23 @@
+NOTICE
+
+This repository contains study notes about a third-party tutorial:
+"How To Make Your Animated Cartoon Show with AI", a video by Dan Kieft
+(youtube.com/@Dankieft), and his public prompt page for it.
+
+- The workflow summaries, diagrams, tables and glossary are original writing
+  that describes and comments on that tutorial. Factual references (step
+  order, tool and model names, settings, durations) are cited for commentary
+  and education.
+- No prompts, skills, transcript text, story, dialogue, characters or images
+  from the tutorial are included. Readers should obtain those from the
+  original sources linked in README.md.
+- The worked example "Spare Specs" (its story, dialogue, characters Marta and
+  Gus, prompts and storyboard) was written for this repository. All images in
+  images/ and visuals/ were generated specifically for this repository with
+  fal.ai (FLUX.2 [klein] 9B text-to-image and edit) from the author's own text
+  prompts, listed in docs/PROMPTS.md. No image from the tutorial was used as
+  an input or reference. The "photos" of a gull and a lamp room are
+  AI-generated stand-ins, not photographs.
+- This project is not affiliated with, sponsored by or endorsed by Dan Kieft,
+  Higgsfield, Black Forest Labs, fal, Anthropic, or any other company or
+  person named in it. All trademarks belong to their owners.

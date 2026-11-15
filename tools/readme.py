@@ -1,0 +1,61 @@
+import json,re
+exec(open('tools/build.py').read().split("draw = [i for i in ORDER]")[0])  # reuse E, bbox, table_rows
+D=json.load(open('whiteboard/board.json'));E=D['elements'];ORDER=D['meta']['order']
+conts=[i for i in ORDER if E[i]['type']=='container']
+def inside(i,c):
+    x,y,w,h=bbox(i);return c['x']<=x+1 and x<c['x']+c['w'] and c['y']<=y+1 and y<c['y']+c['h']
+vis=['01-workflow','02-each-step','03-worked-example','04-decoder-prompts','05-storyboard']
+def cell(s): return str(s).replace('|','\\|')
+def text_of(i):
+    d=E[i]
+    if d['type']=='table':
+        cols,rows=table_rows(d);ks=[k for k,_ in cols]
+        out=['| '+' | '.join(cell(rows[0].get(k,'')) for k in ks)+' |','|'+'---|'*len(ks)]
+        out+=['| '+' | '.join(cell(r.get(k,'')) for k in ks)+' |' for r in rows[1:]]
+        return '\n'.join(out)
+    if d['type'] in('shape','text'):
+        t=d['text']
+        if '\n' in t and not re.search(r'^\d+\. |^- ',t,re.M):
+            return t.replace('\n','  \n')
+        return t
+    return None
+VIDEO='https://www.youtube.com/watch?v=ZRUpbbZF0_A'
+PAGE='https://cartoon-show-site.vercel.app/'
+L=[];A=L.append
+A('# How an AI cartoon show is made: a beginner\'s guide\n')
+A('> **Lock the style once; every asset reuses it.**\n')
+A('Study notes on the workflow Dan Kieft teaches in his video [How To Make Your Animated Cartoon Show with AI](%s) and his public [prompt page](%s): style guide, Claude skills, story, character sheets, sets, props, voices and animation. Written for someone with no animation or art background, with a decoder for the drawing and film vocabulary.\n'%(VIDEO,PAGE))
+A('The worked example is **our own**: *Spare Specs*, a 30-second sketch about a lighthouse keeper whose glasses have been borrowed by a gull. Its story, characters, prompts and all 20 pictures were made for this repo on [fal](https://fal.ai). This repo contains **no** prompts, transcript text, story, characters or images from the tutorial; go to the links above for those (see [NOTICE](NOTICE) and the [development journey](docs/DEVELOPMENT_JOURNEY.md)).\n')
+A('Companion repos, same approach: [ai-commercial-workflow-guide](https://github.com/az9713/ai-commercial-workflow-guide), [cinematic-ai-ad-workflow-guide](https://github.com/az9713/cinematic-ai-ad-workflow-guide), [ai-animation-workflow-guide](https://github.com/az9713/ai-animation-workflow-guide).\n')
+A('## Open it\n')
+A('Download or clone the repo and open **`index.html`** in a browser: one page with a tab per section, a zoomable "Whole board" tab, and images that open full size on click. GitHub shows `.html` files as code, so open it locally.\n')
+A('## The board at a glance\n')
+A('<a href="visuals/00-full-board.png"><img src="visuals/00-full-board.png" alt="The full whiteboard" width="100%"></a>\n')
+A('Each section below shows its tab as an image, with a searchable text version folded underneath.\n')
+for c,v in zip(conts,vis):
+    cd=E[c]
+    A('## '+cd['text']+'\n')
+    A('<a href="visuals/%s.png"><img src="visuals/%s.png" alt="%s" width="100%%"></a>\n'%(v,v,cd['text'].replace('"','')))
+    ids=[i for i in ORDER if i not in conts and E[i]['type']!='arrow' and inside(i,cd)]
+    ids.sort(key=lambda i:(round(bbox(i)[1]/40), bbox(i)[0]))
+    A('<details>\n<summary>Text version</summary>\n')
+    for i in ids:
+        t=text_of(i)
+        if t: A(t+'\n')
+    A('</details>\n')
+A('## Repo contents\n')
+A('- `index.html`: the board as one page with a tab per section; open locally in a browser')
+A('- `visuals/`: each tab rendered as a PNG')
+A('- `whiteboard/board.json`: the board data (positions, text, tables, arrows, image paths)')
+A('- `images/`: the 20 original pictures (12 colour assets + 8 storyboard panels) and the first, flawed scene still kept as a lesson')
+A('- `docs/PROMPTS.md`: every prompt we sent to fal, image by image')
+A('- `docs/DEVELOPMENT_JOURNEY.md`: how this public version was made, including the fal pipeline and the fixes')
+A('- `tools/build.py` rebuilds `index.html`; `tools/shot.py` re-renders the PNGs (Playwright + Chrome); `tools/readme.py` regenerates this README\n')
+A('## Images\n')
+A('Every picture was generated for this repo with fal, using FLUX.2 [klein] 9B (text-to-image, and its edit endpoint when reference images are passed), from our own written prompts. No image from the tutorial was used as an input. The two photos (the gull and the lamp room) are AI-generated stand-ins that play the role of "a photo you took", so the photo-to-cartoon steps can be shown. Total cost was about 20 cents (29 jobs).\n')
+A('## Credits and license\n')
+A('- Workflow taught by Dan Kieft ([video](%s), [prompt page](%s)). Go there for the original prompts, skills and example. Not affiliated with or endorsed by him or by any company named here.'%(VIDEO,PAGE))
+A('- Notes, story, prompts and pictures: written and generated with Claude and fal for study.')
+A('- License: code (`tools/`, the HTML/JS) MIT; text and images CC BY 4.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).')
+open('README.md','w').write('\n'.join(L)+'\n')
+print(len(L))
