@@ -35,7 +35,7 @@ These notes started as a private whiteboard for learning Dan Kieft's AI cartoon-
 5. **Collect.** The build workspace cannot reach `fal.media`, so each image was opened in a browser, checked, and captured at full size.
 6. **Rebuild.** `whiteboard/board.json` written by script from the private board's structure with new text and image paths; `index.html` rebuilt with `tools/build.py`; tab renders re-shot with `tools/shot.py`; README regenerated with `tools/readme.py`; an overlap scan against the tutorial's transcript and prompt page found no shared run of 8 or more words outside titles and tool names.
 
-Cost: 29 fal image jobs (7 text-to-image, 22 edits), about 20 cents.
+Cost: 28 fal image jobs (7 text-to-image, 21 edits), about 17 cents at list price.
 
 ## Animation
 
@@ -43,7 +43,7 @@ Cost: 29 fal image jobs (7 text-to-image, 22 edits), about 20 cents.
 8. **Check before stitching.** Contact sheets of every clip confirmed the continuity rules held (Gus keeps the glasses, Marta never has them, the lamp stays dark until the last shot), and a speech-to-text pass (fal Wizper) confirmed every line was spoken, in order, in the right clip.
 9. **Stitch and publish.** ffmpeg joined the clips into one 21-second, 2.8 MB file; the README plays it inline.
 
-Video cost: about $2.50 for 21 seconds, well above the rate-times-seconds estimate of about $1, because audio and resolution change the per-second price. Check the real charge on the first clip before generating many.
+Video cost: 21 seconds of Wan 3.0 Prime at 720p, $0.14 per second, $2.94 (clips: $1.40, $0.84, $0.70). Sound is not a separate charge: the model generates voices and effects in the same pass. Checking the dialogue with Wizper cost under a cent. Whole project: about $3.11 on fal. Note that Prime costs about 1.4x standard Wan 3.0; at 480p the same video would have been about $1.43.
 
 ## Lessons for next time
 
